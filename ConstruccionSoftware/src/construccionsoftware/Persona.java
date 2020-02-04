@@ -9,29 +9,15 @@ package construccionsoftware;
  *
  * @author Netpp4
  */
-public class Persona {
-     String nombre,apellido;
-    int edad;
-//constructor de la clase persona que recibe por parametro el nombre apellido y edad
-    public Persona(String nombre, String apellido, int edad) {
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.edad = edad;
-    }
-//metodos que sirvan para obtener y poner los datos de la persona
-    public String getApellido() {
-        return apellido;
-    }
+abstract class Persona {
+    private String nombre;
+    private String edad;
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
+    public void setEdad(String edad) {
         this.edad = edad;
     }
 
@@ -43,10 +29,6 @@ public class Persona {
         this.nombre = nombre;
     }
     //metodo que devuelve los datos de la persona
-    public String datos(){
-        return this.nombre+"\n"+this.apellido;
-    }
-    public int edad(){
-        return this.edad;
-    }
+    abstract String datos();
+    abstract String edad();
 }

@@ -17,35 +17,19 @@ public class ConstruccionSoftware {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-        //se declaran las variables que vamos a utilizar
-        String Nombre="Yisus";
-        String Apellildo=" de Nazareth";
-        int Edad=2020;
-        //se debe de crear una instancia de la clase persona
-        Persona p=new Persona(Nombre,Apellildo,Edad);
-        //se muestran los datos de la persona en un mensaje.-
-        JOptionPane.showMessageDialog(null,"Nombre Completo:\n"+ p.datos()+"\n"
-                + "Edad: "+p.edad()+" años");
+     
+        Persona empleado = new Empleado("Johan","15");
+ 
         
-        // creating an inatance of Bicycle  
-        // doing some operations  
-        Bicycle bicycle = new Bicycle(); 
-        bicycle.changeGear(2); 
-        bicycle.speedUp(3); 
-        bicycle.applyBrakes(1); 
-          
-        System.out.println("Bicycle present state :"); 
-        bicycle.printStates(); 
-          
-        // creating instance of the bike. 
-        Bike bike = new Bike(); 
-        bike.changeGear(1); 
-        bike.speedUp(4); 
-        bike.applyBrakes(3); 
-          
-        System.out.println("Bike present state :"); 
-        bike.printStates(); 
+        System.out.println(empleado.datos());
+        System.out.println(empleado.edad());
+        
+        Persona alumno = new Alumno("Alex","16");
+        
+        System.out.println(alumno.datos());
+        System.out.println(alumno.edad());
+
+
     } 
     }
     
